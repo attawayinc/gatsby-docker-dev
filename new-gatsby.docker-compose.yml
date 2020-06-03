@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  install:
+    image: node:12
+    volumes:
+      - .:/usr/src/app/
+    working_dir: /usr/src/app/
+    command: /bin/bash -c "yarn global add gatsby-cli && gatsby new ${PROJECT_NAME} ${GATSBY_SOURCE}"

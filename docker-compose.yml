@@ -1,0 +1,10 @@
+version: '3'
+services:
+  dev:
+    image: node:12
+    volumes:
+      - ./$PROJECT_NAME:/usr/src/app/
+    working_dir: /usr/src/app/
+    command: bash -c "yarn global add gatsby-cli && gatsby develop -H 0.0.0.0"
+    ports:
+      - 8000:8000
