@@ -1,2 +1,1 @@
-sudo chown -R bryan:bryan nenive/
-sudo chown -R bryan:bryan nenive/.*
+Edit .env to match what you are wanting to create and the source
