@@ -4,7 +4,7 @@ services:
     image: mygatsby_base:latest
     user: "${UID}:${GID}"
     volumes:
-      - ./$PROJECT_NAME:/usr/src/app/
+      - ./project/$PROJECT_NAME:/usr/src/app/
     working_dir: /usr/src/app/
     command: bash -c "yarn upgrade && gatsby build && gatsby serve -H 0.0.0.0"
     ports:

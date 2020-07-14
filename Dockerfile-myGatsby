@@ -1,3 +1,5 @@
 FROM node:12
-RUN yarn global upgrade \
-    && yarn global add gatsby-cli
+COPY --chown=1000:1000 \
+    gatsby-config.json /home/node/.config/gatsby/config.json
+RUN yarn global add gatsby-cli \
+    && yarn global upgrade
