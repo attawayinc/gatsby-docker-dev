@@ -1,4 +1,5 @@
 .secret
+.secret2
 .env
 project
 *.swp

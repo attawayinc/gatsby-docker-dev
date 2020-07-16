@@ -1,7 +1,7 @@
 version: '3'
 services:
   build:
-    image: mygatsby_base:latest
+    image: mygatsby_base
     user: "${UID}:${GID}"
     volumes:
       - ./project/$PROJECT_NAME:/usr/src/app/
