@@ -6,9 +6,6 @@ services:
         context: .
         dockerfile: Dockerfile-myGatsby
     user: "${UID}:${GID}"
-    env_file:
-        - ./.env_common
-        - ./.secret
     volumes:
       - ./project/:/usr/src/app/
     working_dir: /usr/src/app/
