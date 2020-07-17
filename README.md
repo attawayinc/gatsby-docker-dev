@@ -16,7 +16,7 @@ Run `make new` to create the Docker image and run `gatsby new`. `make up` will r
 
 ### Running Commands
 You can run a command like so:
-* `docker run mygatsby_base yarn add bulma node-sass gatsby-plugin-sass`
+* `docker-compose run dev yarn add bulma node-sass gatsby-plugin-sass`
 
 ## Known Issues
 On Windows with WSL if you delete the directory and then recreate again with a `make new` the mount may become stale. I worked around this by resetting Docker.
