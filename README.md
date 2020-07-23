@@ -19,4 +19,5 @@ You can run a command like so:
 * `docker-compose run dev yarn add bulma node-sass gatsby-plugin-sass`
 
 ## Known Issues
-On Windows with WSL if you delete the directory and then recreate again with a `make new` the mount may become stale. I worked around this by resetting Docker.
+* On Windows with WSL if you delete the directory and then recreate again with a `make new` the mount may become stale. I worked around this by resetting Docker.
+* Rootless docker doesn't do ID translation well and mounts files as root, meaning you have to be root to operate the files. The changes to the host filesystem are done as the user running Docker, since that user has no access to root and it is a translation.

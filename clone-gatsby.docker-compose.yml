@@ -3,7 +3,8 @@ version: '3.3'
 services:
   base:
     image: mygatsby_base
-    user: "${UID}:${GID}"
+    # In rootless Docker, this causes issues
+    # user: "${UID}:${GID}"
     volumes:
       - type: bind
         source: ./project/${PROJECT_NAME}
