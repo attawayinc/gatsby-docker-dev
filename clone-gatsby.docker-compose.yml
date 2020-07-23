@@ -1,12 +1,12 @@
-version: '3'
+version: '3.3'
 
 services:
   base:
-    build:
-        context: .
-        dockerfile: Dockerfile-myGatsby
+    image: mygatsby_base
     user: "${UID}:${GID}"
     volumes:
-      - ./project/${PROJECT_NAME}:/usr/src/app/
+      - type: bind
+        source: ./project/${PROJECT_NAME}
+        target: /usr/src/app/
     working_dir: /usr/src/app/
     command: /bin/bash -c "yarn install"

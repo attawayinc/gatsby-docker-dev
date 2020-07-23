@@ -10,6 +10,10 @@ build:
 	docker-compose -f build-gatsby.docker-compose.yml up
 up:
 	docker-compose up
+image:
+	docker-compose -f mygatsby-build.docker-compose.yml build
 .secret:
 .secret2:
 	./make_secrets
+clean:
+	@rm -rf project/
