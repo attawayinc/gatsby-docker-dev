@@ -2,7 +2,8 @@ version: '3'
 services:
   dev:
     image: mygatsby_base
-    user: "${UID}:${GID}"
+    # Rootless Docker has issues with permissions on bind mounts
+    # user: "${UID}:${GID}"
     volumes:
       - ./project/$PROJECT_NAME:/usr/src/app/
     working_dir: /usr/src/app/
