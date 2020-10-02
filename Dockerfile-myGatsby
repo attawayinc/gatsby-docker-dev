@@ -3,3 +3,4 @@ COPY --chown=1000:1000 \
     gatsby-config.json /home/node/.config/gatsby/config.json
 RUN yarn global add gatsby-cli \
     && yarn global upgrade
+RUN sudo curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && chmod +x /usr/local/bin/docker-compose
