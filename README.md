@@ -1,3 +1,5 @@
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/bryanmr/gatsby-docker-dev)
+
 ## Instructions
 Edit .env to match what you are wanting to create
 
